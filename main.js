@@ -12,7 +12,7 @@ function sieve(num) {
   var primes = [];
   var num = secret();
 
-  // console.log(num);
+  console.log(num);
 
   for (var q = 2; q < num; q++) 
     {
@@ -38,7 +38,7 @@ function checkPrime(){
   var test1 = [secret(x) + secret(y)];
   var test2 = [secret(x + y)];
   var primes = sieve();
-  // console.log(primes);
+  console.log(primes);
 
 //iterate over array for x & y
   for (var x=0; x<primes.length; x++) {

@@ -1,19 +1,18 @@
-
+var n = prompt("Please enter number");
 function secret(){
-  var n = prompt("Please enter number");
   // console.log(n)
   var num = parseInt(n);
   return num;
 
 }
 
-function sieve() {
+function sieve(num) {
   //gets all primes of number
   var D = [];
   var primes = [];
   var num = secret();
 
-  console.log(num);
+  // console.log(num);
 
   for (var q = 2; q < num; q++) 
     {
@@ -35,16 +34,18 @@ function sieve() {
 }
 
 function checkPrime(){
+
   var test1 = [secret(x) + secret(y)];
   var test2 = [secret(x + y)];
   var primes = sieve();
-  console.log(primes);
+  // console.log(primes);
 
+//iterate over array for x & y
   for (var x=0; x<primes.length; x++) {
-    for (var y=0; y<primes.length; y++) {
+   for (var y=0; y<primes.length; y++) {
 
-      console.log("x equals" + [x]);
-      console.log("y equals" + [y]);
+      // console.log(primes[x]);
+      // console.log(primes[y]);
 
       if (test1 === test2)
       {
@@ -53,8 +54,8 @@ function checkPrime(){
         return("Not additive")
       }
    }
+ 
  }
-
 }
 checkPrime();
 
